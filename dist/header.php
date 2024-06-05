@@ -1,6 +1,6 @@
 <header>
-    <img  src="assets/img/logo.jpg" alt="..." style="display: block; margin: 0 auto;" />
-    <h1 class="site-heading text-center text-faded d-none d-lg-block">
-        <span class="site-heading-upper text-primary mb-3">A Comprehensive Guide to a Healthy and Harmonious Lifestyle</span>
-    </h1>
+    <img  src="assets/img/logo.png" alt="..." style="display: block; margin: 0 auto; margin-top: 2rem; " />
+    <div class="site-heading text-center">
+        <span class="site-heading-upper text-white">A Comprehensive Guide to a Healthy and Harmonious Lifestyle</span>
+    </div>
 </header>

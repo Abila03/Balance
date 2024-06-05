@@ -2846,8 +2846,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #000;
-  --bs-btn-bg: #e6a756;
-  --bs-btn-border-color: #e6a756;
+  --bs-btn-bg: #000000;
+  --bs-btn-border-color: #000000;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #eab46f;
   --bs-btn-hover-border-color: #e9b067;
@@ -3611,7 +3611,7 @@ textarea.form-control-lg {
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-link-color);
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
-  --bs-nav-link-disabled-color: #6c757d;
+  --bs-nav-link-disabled-color: #000000;
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
@@ -3648,8 +3648,8 @@ textarea.form-control-lg {
   --bs-nav-tabs-border-radius: 0.375rem;
   --bs-nav-tabs-link-hover-border-color: #e9ecef #e9ecef #dee2e6;
   --bs-nav-tabs-link-active-color: #495057;
-  --bs-nav-tabs-link-active-bg: #a2a19d;
-  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #a2a19d;
+  --bs-nav-tabs-link-active-bg: #030303;
+  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #fff;
   border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
 }
 .nav-tabs .nav-link {
@@ -3682,7 +3682,7 @@ textarea.form-control-lg {
 
 .nav-pills {
   --bs-nav-pills-border-radius: 0.375rem;
-  --bs-nav-pills-link-active-color: #a2a19d;
+  --bs-nav-pills-link-active-color: #fff;
   --bs-nav-pills-link-active-bg: #e6a756;
 }
 .nav-pills .nav-link {
@@ -4142,7 +4142,7 @@ textarea.form-control-lg {
   --bs-navbar-color: rgba(255, 255, 255, 0.55);
   --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
   --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
-  --bs-navbar-active-color: #a2a19d;
+  --bs-navbar-active-color: #fff;
   --bs-navbar-brand-color: #fff;
   --bs-navbar-brand-hover-color: #fff;
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
@@ -4201,7 +4201,7 @@ textarea.form-control-lg {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #fff;
+  --bs-card-bg: #4c1ccf;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -4210,7 +4210,7 @@ textarea.form-control-lg {
   min-width: 0;
   height: var(--bs-card-height);
   word-wrap: break-word;
-  background-color: var(--bs-card-bg);
+  background-color: #404040;
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
@@ -10863,7 +10863,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bg.jpg");
+  background-image: url("../assets/img/bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10874,12 +10874,12 @@ p {
 }
 
 .text-faded {
-  color: black;
+  color: #f6e1c5;
 }
 
 .site-heading {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  
+  margin-bottom: 2rem;
   text-transform: uppercase;
   line-height: 1;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10929,14 +10929,14 @@ p {
 }
 
 #mainNav {
-  background-color: #ffff;
+  background-color: rgba(47, 23, 15, 0.9);
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #mainNav .navbar-brand {
   color: #e6a756;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: black;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 800;
 }
 #mainNav .navbar-nav .nav-item.active .nav-link {
@@ -10993,7 +10993,7 @@ p {
 }
 
 .footer {
-  background-color: #FFFFFF;
+  background-color: rgba(47, 23, 15, 0.9);
 }
 
 .intro {
@@ -11075,4 +11075,67 @@ p {
 
 .address strong {
   font-size: 1.2rem;
+}
+
+.banner{
+  background-color: black;
+  color: black;
+  padding: 100px;
+  text-align: center;
+}
+
+.pensil {
+  position: absolute;
+  top: 5;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+.profil-container {
+  position: relative;
+}
+
+.profil{
+  border-radius: 70%;
+  width: 200px;
+  height: 200px;
+  padding : 10x;
+}
+
+.nama-profil{
+  margin : 10px 0;
+}
+
+.acc-edit{
+  display: none;
+  position: fixed; /* Posisi absolut untuk kontrol lebih mudah */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Pusat popup */
+  z-index: 1000; /* Pastikan popup berada di atas elemen lain */
+  background-color: black;
+  padding: 100px;
+  border: 1px solid #000;
+}
+
+.btn-save{
+  background-color: yellow;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding : 8px;
+  border-radius : 30%;
+  
+}
+
+.kamera {
+  position: absolute;
+  /*top: 5;*/
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  /*margin: 10px;*/
+  cursor: pointer;
 }

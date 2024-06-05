@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<link rel="icon" type="image/x-icon" href="assets/mini logo.png" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <style>
+<?php include 'head.php'; ?>
+  <!--<style>
     /* General Styles */
     body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      background-image : url("../assets/img/bg.jpg")
+      background-image: url("../assets/img/bg.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
     }
 
     header {
@@ -128,8 +123,8 @@
         flex-direction: column;
       }
     }
-  </style>
-</head>
+  </style>-->
+
 <body>
   <header>
     <div class="header-container">
