@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'head.php'; ?>
+    <?php include 'view/head.php'; ?>
     <body>
-        <?php include 'header.php'; ?>
-        <?php include 'navbar.php'; ?>
+        <?php include 'view/header.php'; ?>
+        <?php include 'view/navbar.php'; ?>
         <section class="page-section clearfix">
             <div class="container">
                 <div class="intro">
@@ -99,7 +99,7 @@
                 </div>
             </div>
         </section>
-        <?php include 'footer.php'; ?>
+        <?php include 'view/footer.php'; ?>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

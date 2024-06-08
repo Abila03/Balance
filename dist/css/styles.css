@@ -2863,19 +2863,19 @@ textarea.form-control-lg {
 
 .btn-secondary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #2F170F;
-  --bs-btn-border-color: #2F170F;
+  --bs-btn-bg: #ffffff;
+  --bs-btn-border-color: #ffffff;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #28140d;
-  --bs-btn-hover-border-color: #26120c;
+  --bs-btn-hover-bg: #ffffff;
+  --bs-btn-hover-border-color: #ffffff;
   --bs-btn-focus-shadow-rgb: 78, 58, 51;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #26120c;
-  --bs-btn-active-border-color: #23110b;
+  --bs-btn-active-bg: #ffffff;
+  --bs-btn-active-border-color: #ffffff;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #2F170F;
-  --bs-btn-disabled-border-color: #2F170F;
+  --bs-btn-disabled-bg: #ffffff;
+  --bs-btn-disabled-border-color: #ffffff;
 }
 
 .btn-success {
@@ -2897,19 +2897,19 @@ textarea.form-control-lg {
 
 .btn-info {
   --bs-btn-color: #000;
-  --bs-btn-bg: #0dcaf0;
-  --bs-btn-border-color: #0dcaf0;
+  --bs-btn-bg: #171c24;
+  --bs-btn-border-color: #294879;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #31d2f2;
-  --bs-btn-hover-border-color: #25cff2;
+  --bs-btn-hover-bg: #295bac;
+  --bs-btn-hover-border-color: #4285F4;
   --bs-btn-focus-shadow-rgb: 11, 172, 204;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #3dd5f3;
-  --bs-btn-active-border-color: #25cff2;
+  --bs-btn-active-bg: #325ea3;
+  --bs-btn-active-border-color: #4285F4;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #0dcaf0;
-  --bs-btn-disabled-border-color: #0dcaf0;
+  --bs-btn-disabled-bg: #3563ad;
+  --bs-btn-disabled-border-color: #4285F4;
 }
 
 .btn-warning {
@@ -4187,7 +4187,7 @@ textarea.form-control-lg {
 
 
 .card {
-  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-y: 3rem;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-border-width: 1px;
@@ -4200,7 +4200,7 @@ textarea.form-control-lg {
   --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
   --bs-card-cap-color: ;
   --bs-card-height: ;
-  --bs-card-color: ;
+  --bs-card-color: transparent;
   --bs-card-bg: #4c1ccf;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
@@ -8121,6 +8121,11 @@ textarea.form-control-lg {
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-blue {
+  --bs-text-opacity: 1;
+  color: var(--bs-blue) !important;
+}
+
 .text-body {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
@@ -11108,6 +11113,17 @@ p {
   margin : 10px 0;
 }
 
+.filter{
+  position: absolute;
+  /*top: 5;*/
+  left: 10;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  /*margin: 10px;*/
+  cursor: pointer;
+}
+
 .acc-edit{
   display: none;
   position: fixed; /* Posisi absolut untuk kontrol lebih mudah */
@@ -11138,4 +11154,28 @@ p {
   height: 50px;
   /*margin: 10px;*/
   cursor: pointer;
+}
+
+.btn-google{
+  display: inline-block; /* Membuatnya berperilaku seperti tombol */
+  padding: 10px 20px; /* Sesuaikan bantalan sesuai kebutuhan */
+  font-size: 16px; /* Sesuaikan ukuran font sesuai kebutuhan */
+  font-weight: bold; /* Teks tebal */
+  text-align: center; /* Teks tengah */
+  text-decoration: none; /* Hapus garis bawah */
+  cursor: pointer; /* Tunjukkan area yang dapat diklik */
+
+  /* Warna tombol Google */
+  background-color: #fff; /* Latar belakang putih */
+  color: #000; /* Teks hitam */
+  border: 1px solid #ccc; /* Batas abu-abu */
+  border-radius: 4px; /* Sudut bulat */
+}
+
+.btn-login{
+
+}
+
+.img-login{
+  width: 280px;
 }
