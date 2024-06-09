@@ -1,7 +1,7 @@
 <?php
 
 // Koneksi database
-include 'config.php';
+include 'controller/config.php';
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
   $email = mysqli_real_escape_string($conn, $_POST['email']);

@@ -11089,6 +11089,13 @@ p {
   text-align: center;
 }
 
+.banner-acc{
+  background-color: white;
+  color: white;
+  padding: 100px;
+  text-align: center;
+}
+
 .pensil {
   position: absolute;
   top: 5;
@@ -11116,10 +11123,10 @@ p {
 .filter{
   position: absolute;
   /*top: 5;*/
-  left: 10;
+  left: 0;
   bottom: 0;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   /*margin: 10px;*/
   cursor: pointer;
 }
@@ -11172,8 +11179,16 @@ p {
   border-radius: 4px; /* Sudut bulat */
 }
 
-.btn-login{
-
+.detail-artikel{
+  display: none;
+  position: fixed; /* Posisi absolut untuk kontrol lebih mudah */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Pusat popup */
+  z-index: 1000; /* Pastikan popup berada di atas elemen lain */
+  background-color: black;
+  padding: 100px;
+  border: 1px solid #000;
 }
 
 .img-login{

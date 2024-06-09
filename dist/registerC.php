@@ -3,15 +3,33 @@
 // Koneksi database
 include 'config.php';
 
-if (isset($_POST['nama']) && isset($_POST['email']) && isset($_POST['password'])) {
+// Endpoint untuk registrasi
+$endpoint = 'https://66643635932baf9032aa5c83.mockapi.io/pengguna';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Validasi data
+  if (empty($_POST['nama']) || empty($_POST['email']) || empty($_POST['password'])) {
+    $response = ['success' => false, 'error' => 'Semua kolom harus diisi'];
+    echo json_encode($response);
+    exit;
+  }
+
   $nama = mysqli_real_escape_string($conn, $_POST['nama']);
   $email = mysqli_real_escape_string($conn, $_POST['email']);
   $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-  // Validasi data
-  if (empty($nama) || empty($email) || empty($password)) {
-    $response = ['success' => false, 'error' => 'Semua kolom harus diisi'];
+  // Cek email sudah terdaftar
+  $sql = "SELECT * FROM pengguna WHERE email = ?";
+  $stmt = mysqli_prepare($conn, $sql);
+  mysqli_stmt_bind_param($stmt, "s", $email);
+  mysqli_stmt_execute($stmt);
+  $result = mysqli_stmt_get_result($stmt);
+
+  if (mysqli_num_rows($result) > 0) {
+    $response = ['success' => false, 'error' => 'Email sudah terdaftar'];
     echo json_encode($response);
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
     exit;
   }
 
@@ -45,13 +63,14 @@ if (isset($_POST['nama']) && isset($_POST['email']) && isset($_POST['password'])
 
   if (mysqli_affected_rows($conn) > 0) {
     $response = ['success' => true, 'message' => 'Registrasi berhasil'];
-    header('Location: login.php'); // Redirect ke halaman login
+    header('Location: login.php');
+    echo json_encode($response);
     exit;
   } else {
     $response = ['success' => false, 'error' => 'Gagal registrasi'];
+    echo json_encode($response);
   }
 
-  echo json_encode($response);
   mysqli_stmt_close($stmt);
   mysqli_close($conn);
 }

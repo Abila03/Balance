@@ -1,0 +1,88 @@
+// Cek apakah data kosong (opsional)
+  $sql = "SELECT COUNT(*) AS total FROM pengguna";
+  $stmt = mysqli_prepare($conn, $sql);
+  if (!$stmt) { // Periksa persiapan query
+    $response = ['success' => false, 'error' => 'Gagal menyiapkan query'];
+    echo json_encode($response);
+    exit;
+  }
+  mysqli_stmt_execute($stmt);
+  $result = mysqli_stmt_get_result($stmt);
+  $data = mysqli_fetch_assoc($result);
+  $totalData = $data['total'];
+  mysqli_stmt_close($stmt);
+
+  // Atur AUTO_INCREMENT jika data kosong
+  if ($totalData === 0) {
+    $sql_reset_auto_increment = "ALTER TABLE pengguna AUTO_INCREMENT = 1;";
+    $stmt = mysqli_prepare($conn, $sql_reset_auto_increment);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+  }
+
+<?php
+                                include "config.php"; 
+                                $sql=mysqli_query($conn, "SELECT * FROM kategori") 
+                                or die (mysqli_error($conn));
+                                while ($data = mysqli_fetch_array($query)){
+                                    echo "<option value=$data [id_kategori]> $data[nama_kategori]</option>";
+                                }
+                                ?>
+
+<?php
+
+include "config.php";
+// SQL query to fetch category descriptions
+$sql = "SELECT * deskripsi FROM kategori";  // Replace with your actual table name
+
+$result = $conn->query($sql);
+
+// Prepare response data
+$response = array();
+
+if ($result->num_rows > 0) {
+  while ($row = $result->fetch_assoc()) {
+    $category = $row["kategori"];
+    $description = $row["deskripsi"];
+    $response[$category] = $description;
+  }
+} else {
+  $response["error"] = "No data found";
+}
+
+// Close connection
+$conn->close();
+
+// Encode response as JSON
+header('Content-Type: application/json');
+echo json_encode($response);
+
+?>
+
+<?php
+    include "config.php";
+
+    $sql = "SELECT * FROM kategori";
+    $result = mysqli_query($conn, $sql);
+
+    $jmlh=mysqli_num_rows($result);
+    if ($jmlh>0){
+        while ($row=mysqli_fetch_assoc($result)){
+?>
+    <div class="col mb-5">
+        <div class="card h-100" style="background-color: #404040;">
+            <div class="card-body p-4">
+                <div class="text-white">
+                    <h5 class="fw-bolder text-center"><?=$row["nama_kategori"]; //echo $row["nama_kategori"]?></h5>
+                    <p>
+                        <?=$row["deskripsi"]; //echo $row["deskripsi"]?>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php
+        }
+    }
+?>
+<textarea class="form-control" id="article-content" name="isi" rows="10"></textarea>
